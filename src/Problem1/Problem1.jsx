@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './styles.css'; // Import your CSS file
 
 const Problem1 = () => {
   const [layout, setLayout] = useState([{ id: 1, children: [] }]);
@@ -32,7 +31,6 @@ const Problem1 = () => {
       if (partitionIndex === 0 || updatedLayout.length === 1) return prevState;
 
       if (partitionIndex > 0) {
-        // Check if removing from parent partition or main layout
         if (updatedLayout[partitionIndex - 1].children.includes(partitionId)) {
           const parentPartitionIndex = partitionIndex - 1;
           updatedLayout[parentPartitionIndex].children = updatedLayout[
